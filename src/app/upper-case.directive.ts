@@ -6,7 +6,8 @@ import { Directive, Renderer2, HostListener, ElementRef } from '@angular/core';
 export class UpperCaseDirective {
 
   constructor(private renderer2: Renderer2, 
-  private eleRef: ElementRef<HTMLInputElement>) { }
+  private eleRef: ElementRef<HTMLInputElement>,
+  private upperCaseDir: UpperCaseDirective) { }
 
 
   @HostListener('input') onChange(){
