@@ -1,4 +1,5 @@
 import { Directive, Renderer2, HostListener, ElementRef } from '@angular/core';
+import { LowerCaseDirective } from './lower-case.directive';
 
 @Directive({
   selector: '[upperCase]'
@@ -6,8 +7,7 @@ import { Directive, Renderer2, HostListener, ElementRef } from '@angular/core';
 export class UpperCaseDirective {
 
   constructor(private renderer2: Renderer2, 
-  private eleRef: ElementRef<HTMLInputElement>,
-  private upperCaseDir: UpperCaseDirective) { }
+  private eleRef: ElementRef<HTMLInputElement>) { }
 
 
   @HostListener('input') onChange(){
