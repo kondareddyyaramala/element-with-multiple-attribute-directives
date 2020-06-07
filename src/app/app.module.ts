@@ -3,14 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { LowerCaseDirective } from './lower-case.directive';
 import { UpperCaseDirective } from './upper-case.directive';
-import { CapitalizeDirective } from './capitalize.directive';
+import { MaxLengthDirective } from './max-length.directive';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, LowerCaseDirective, UpperCaseDirective, CapitalizeDirective ],
+  declarations: [ AppComponent, UpperCaseDirective, MaxLengthDirective ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

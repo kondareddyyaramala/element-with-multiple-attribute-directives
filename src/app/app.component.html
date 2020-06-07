@@ -1,8 +1,7 @@
 <section>
   <input #input
-  lowerCase
+  [appMaxLength]=10
   upperCase
-  capitalize
   (input)="onChange(input.value)"
   >
 </section>
