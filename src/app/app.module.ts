@@ -7,8 +7,8 @@ import { UpperCaseDirective } from './upper-case.directive';
 import { MaxLengthDirective } from './max-length.directive';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, UpperCaseDirective, MaxLengthDirective ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent, UpperCaseDirective, MaxLengthDirective],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
