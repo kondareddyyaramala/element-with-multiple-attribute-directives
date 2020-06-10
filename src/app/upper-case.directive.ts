@@ -1,5 +1,4 @@
 import { Directive, Renderer2, HostListener, ElementRef } from '@angular/core';
-import { LowerCaseDirective } from './lower-case.directive';
 
 @Directive({
   selector: '[upperCase]'
