@@ -1,4 +1,5 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'my-app',
@@ -6,9 +7,15 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
+  @ViewChild('input') input: ElementRef<HTMLInputElement>;
+
 
   onChange(v) {
     console.log(`Value :: ` + v);
+  }
+
+  ngAfterViewInit(){
+    fromEvent(this.input.nativeElement, 'input')
+      .subscribe((v: any) => console.log(v!.target!.value));
   }
 }
