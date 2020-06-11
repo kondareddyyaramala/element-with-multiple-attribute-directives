@@ -1,11 +1,11 @@
 import { Directive, Renderer2, HostListener, ElementRef, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appMaxLength]'
+  selector: '[maxLength]'
 })
 export class MaxLengthDirective {
 
-  @Input('appMaxLength') maxLength;
+  @Input('maxLength') maxLength;
 
   constructor(private renderer2: Renderer2,
     private eleRef: ElementRef<HTMLInputElement>) { }
