@@ -11,11 +11,11 @@ export class AppComponent {
 
 
   onChange(v) {
-    console.log(`Value :: ` + v);
+    console.log(`Value :: ${v}`);
   }
 
   ngAfterViewInit(){
     fromEvent(this.input.nativeElement, 'input')
-      .subscribe((v: any) => console.log(v!.target!.value));
+      .subscribe((v: any) => console.log(`fromEvennt : ${v!.target!.value}`));
   }
 }

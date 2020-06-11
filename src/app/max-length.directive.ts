@@ -13,6 +13,7 @@ export class MaxLengthDirective {
 
   @HostListener('input') onChange() {
     let { value } = this.eleRef.nativeElement;
+    console.log(`Max Length Directive : ${value}`);
     if (this.maxLength && !!value) {
       value = value.length < this.maxLength ? value : value.slice(0, this.maxLength);
     }

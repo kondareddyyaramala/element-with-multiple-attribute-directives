@@ -11,6 +11,7 @@ export class UpperCaseDirective {
 
   @HostListener('input') onChange() {
     const { value } = this.eleRef.nativeElement;
+    console.log(`Upper case Directive : ${value}`);
     this.renderer2.setProperty(this.eleRef.nativeElement, 'value', value.toUpperCase());
   }
 
